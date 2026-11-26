@@ -95,18 +95,13 @@ draft: false
 
 ### 首次部署
 
-1. 建远程仓库并推送：
+仓库已建好：<https://github.com/miaoxutao123/quirkymeowcorner.fun>（public，默认分支 `main`）。
 
-```bash
-git remote add origin <你的仓库地址>
-git push -u origin main
-```
-
-2. Cloudflare Dashboard → Workers & Pages → Create → 连接这个仓库
-3. 构建设置：
+1. Cloudflare Dashboard → Workers & Pages → Create → 连接这个仓库
+2. 构建设置：
    - Build command：`python build.py`
    - Deploy command：`npx wrangler deploy`
-4. 部署后到 Settings → Domains & Routes 绑定你的域名
+3. 部署后到 Settings → Domains & Routes 绑定 `quirkymeowcorner.fun`
 
 之后每次 `./publish.sh` 推上去，Cloudflare 自动构建上线。
 
