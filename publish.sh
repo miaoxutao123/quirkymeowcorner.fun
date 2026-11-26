@@ -110,21 +110,25 @@ say "5/5 提交并推送"
 
 git add -A
 
+# 注意：这里不能"没有变更就 exit"。
+# 没有新变更，不代表远程是最新的——可能是手动 commit 过、或者上次推送失败、
+# 或者只是落后于 origin。提交和推送是两件事，必须分开判断。
 if git diff --cached --quiet; then
-  ok "没有变更，无需提交"
-  exit 0
+  ok "没有新变更，跳过提交"
+else
+  [ -n "$MSG" ] || MSG="publish: $(date '+%Y-%m-%d %H:%M')"
+  git -c core.quotepath=false commit -q -m "$MSG"
+  ok "已提交：$MSG"
 fi
-
-[ -n "$MSG" ] || MSG="publish: $(date '+%Y-%m-%d %H:%M')"
-
-git -c core.quotepath=false commit -q -m "$MSG"
-ok "已提交：$MSG"
 
 branch=$(git rev-parse --abbrev-ref HEAD)
 if git remote get-url origin >/dev/null 2>&1; then
-  git push -q origin "$branch"
-  ok "已推送到 origin/$branch"
-  printf '\n发布完成。Cloudflare 会在几十秒内自动构建上线。\n'
+  if git push -q origin "$branch"; then
+    ok "已推送到 origin/$branch"
+    printf '\n发布完成。Cloudflare 会在几十秒内自动构建上线。\n'
+  else
+    die "推送失败（检查凭证或网络），提交仍保留在本地"
+  fi
 else
   printf '\n\033[33m还没有配置 origin 远程仓库，提交已完成但未推送。\033[0m\n'
   printf '配好之后执行：git push -u origin %s\n' "$branch"
