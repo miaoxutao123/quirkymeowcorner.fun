@@ -25,16 +25,14 @@ DIST = ROOT / "dist"
 
 FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
 
-# 猫头标志的内联版本，用在顶栏。和 assets/favicon.svg 是同一只猫，
-# 但去掉外框、只留脸，在 30px 尺寸下更清楚。
-CAT_SVG = """<svg viewBox="4 8 56 52" xmlns="http://www.w3.org/2000/svg" focusable="false">
-<path d="M14 26 L12.5 12 L25 18.5 Z" fill="var(--warm)"/>
-<path d="M50 26 L51.5 12 L39 18.5 Z" fill="var(--warm)"/>
-<path d="M32 17c-9.4 0-17 7.1-17 15.9 0 9 7.6 16.1 17 16.1s17-7.1 17-16.1C49 24.1 41.4 17 32 17z" fill="var(--warm)"/>
-<circle cx="24.6" cy="32.4" r="4.1" fill="var(--ink)"/>
-<path d="M36.2 29.3l5.6 5.6M41.8 29.3l-5.6 5.6" stroke="var(--ink)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
-<path d="M29.4 40.2q2.6 2.4 5.2 0" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-<path d="M8 34h8M10 39l7 2M56 34h-8M54 39l-7 2" stroke="var(--warm)" stroke-width="2" stroke-linecap="round" fill="none" opacity=".75"/>
+# 猫头标志的内联版本，用在顶栏。
+# 和 assets/favicon.svg 同一只猫，但去掉紫底、把纸白换成 currentColor，
+# 这样在明暗两种主题下都跟着文字颜色走；顶栏再给它铺一层紫底当"小图标"。
+# 顶栏猫头。和 favicon 用同一套 16 网格坐标，只把 viewBox 放大到 16 见方，
+# 这样标签栏图标和页面内的标志是同一个形状，不会一大一小对不上。
+CAT_SVG = """<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" focusable="false">
+<path fill="currentColor" d="M4.1 2.1 L7.4 7.7 L8.6 7.7 L11.9 2.1
+  L13.2 7 A5.15 5.15 0 0 1 8 14.2 A5.15 5.15 0 0 1 2.8 7 Z"/>
 </svg>"""
 
 
@@ -241,6 +239,28 @@ def build_calendar(days, lo, hi):
 </div>"""
 
 
+def build_icp(cfg):
+    """备案信息。
+
+    工信部要求备案号在网站底部展示，并链接到 beian.miit.gov.cn。
+    这里用 nofollow，避免给备案系统添外链权重。
+    """
+    icp = cfg.get("icp") or {}
+    number = (icp.get("number") or "").strip()
+    if not number:
+        return ""
+    url = icp.get("url") or "https://beian.miit.gov.cn/"
+    domain = (icp.get("domain") or "").strip()
+    # 备案号后面附域名，方便核对；没有配域名就只显示号。
+    tail = f'<span class="foot-icp-domain">{html.escape(domain)}</span>' if domain else ""
+    return (
+        '<div class="wrap foot-icp">'
+        f'<a href="{html.escape(url, quote=True)}" target="_blank" '
+        f'rel="nofollow noopener">{html.escape(number)}</a>{tail}'
+        "</div>"
+    )
+
+
 def page(title, description, body, cfg, active="", extra_head=""):
     parts = []
     for n in cfg["nav"]:
@@ -260,6 +280,7 @@ def page(title, description, body, cfg, active="", extra_head=""):
         nav=nav_html,
         body=body,
         year=datetime.now().year,
+        icp=build_icp(cfg),
         extra_head=extra_head,
     )
 
@@ -552,6 +573,25 @@ def main():
 
     write(DIST / "robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
     write(DIST / "feed.xml", build_feed(cfg, published))
+
+    # PWA manifest：不管装不装成应用，它都能让安卓端用上高清图标
+    manifest = {
+        "name": cfg["site"]["title"],
+        "short_name": cfg["site"]["title"],
+        "description": cfg["site"]["description"],
+        "start_url": "/",
+        "display": "browser",
+        "background_color": "#fdfcf7",
+        "theme_color": "#4538c9",
+        "lang": cfg["site"]["lang"],
+        "icons": [
+            {"src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+            {"src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"},
+            {"src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml"},
+        ],
+    }
+    write(DIST / "manifest.webmanifest",
+          json.dumps(manifest, ensure_ascii=False, indent=1))
 
     n_pages = len(list(DIST.rglob("*.html")))
     print(f"构建完成：{n_pages} 个页面，{len(published)} 篇文章，{len(by_date)} 个日历落地页")

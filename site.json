@@ -29,5 +29,10 @@
     }
   },
   "ledger": "../ledger/data/days.json",
-  "ledgerSummary": "../ledger/data/summary.json"
+  "ledgerSummary": "../ledger/data/summary.json",
+  "icp": {
+    "number": "晋ICP备2024039567号-1",
+    "url": "https://beian.miit.gov.cn/",
+    "domain": "quirkymeowcorner.fun"
+  }
 }

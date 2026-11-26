@@ -157,11 +157,21 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .brand-cat {
   width: 30px;
   height: 30px;
-  display: block;
-  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1);
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fdfcf7;
+  flex-shrink: 0;
+  transition: transform .35s cubic-bezier(.34, 1.56, .64, 1), background .2s;
 }
-.brand-cat svg { display: block; width: 100%; height: 100%; }
-.brand:hover .brand-cat { transform: rotate(-8deg) scale(1.1); }
+/* 猫头图形在 16 网格里左右各留了一点余量（实际只占 x 2.6–13.4），
+   所以 svg 要给到比容器更大的尺寸，看上去才不显小。 */
+.brand-cat svg { display: block; width: 24px; height: 24px; }
+.brand:hover .brand-cat { transform: rotate(-7deg) scale(1.08); }
+
+/* 暗色下主色变浅，底色跟着调深一档，避免和纸白反差不足 */
+[data-theme="dark"] .brand-cat { background: var(--accent-2); color: #16151a; }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-cn { font-size: 15px; font-weight: 600; letter-spacing: .01em; }
@@ -839,6 +849,26 @@ h2.plain::before {
 .foot-links a:hover { color: var(--accent); }
 .foot-copy { font-variant-numeric: tabular-nums; }
 .dot { color: var(--line-2); }
+
+/* 备案号单独一行居中——国内站点的通行做法，也让这行在视觉上
+   和上面那排导航链接区分开，不至于被误读成又一个页脚链接。 */
+.foot-icp {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  position: relative;
+  z-index: 1;
+}
+.foot-icp a {
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .01em;
+}
+.foot-icp a:hover { color: var(--accent); text-decoration: none; }
+.foot-icp-domain { margin-left: 8px; opacity: .72; }
 
 /* ======================= 进场动画 ======================= */
 
