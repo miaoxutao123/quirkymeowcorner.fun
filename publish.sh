@@ -68,16 +68,41 @@ if grep -rqE '\{\{[a-zA-Z_]+\}\}' dist --include='*.html'; then
 fi
 ok "模板变量全部替换"
 
-# 4b-2. 产物和即将提交的数据里不能有密钥。
+# 4b-2. 要提交的内容里不能有密钥。
 # 这道守卫是被 GitHub 的 secret scanning 拦下来之后补的：days.json 的
 # conv_samples 存的是对话原文，里面有当时贴进去的真实 API Key，
 # 推到公开仓库等于公开泄漏。
+#
+# 扫两处：data/ 的数据快照，以及暂存区里所有将要提交的文本文件。
+# 只扫 data/ 不够——content/ 下的文章也可能引用到原文。
 if ! python sanitize_data.py --check >/dev/null 2>&1; then
   echo "  数据里有疑似密钥，已阻止提交：" >&2
   python sanitize_data.py --check 2>&1 | sed 's/^/  /' >&2
   die "先跑 python sanitize_data.py 清理"
 fi
-if grep -rqE 'sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}' dist --include='*.html' --include='*.xml' 2>/dev/null; then
+
+# 暂存区里的文本文件逐个扫，命中就阻止。用 git diff --cached 拿文件名，
+# 避免把 dist/ 之类的大目录也扫一遍。
+leaked=""
+while IFS= read -r f; do
+  [ -f "$f" ] || continue
+  case "$f" in
+    *.json|*.md|*.html|*.txt|*.py|*.sh|*.js|*.yml|*.yaml|*.css|*.xml|*.svg) ;;
+    *) continue ;;
+  esac
+  if grep -qaE 'sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{35}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|AKID[0-9A-Za-z]{32}|LTAI[0-9A-Za-z]{12,}|xox[baprs]-[A-Za-z0-9-]{10,}' "$f" 2>/dev/null; then
+    leaked="$leaked  $f"$'\n'
+  fi
+done < <(git diff --cached --name-only --diff-filter=ACM 2>/dev/null)
+
+if [ -n "$leaked" ]; then
+  echo "  即将提交的文件里有疑似密钥：" >&2
+  printf '%s' "$leaked" >&2
+  die "清理后再提交（python sanitize_data.py <file>）"
+fi
+
+# 产物 HTML 也不能带（build.py 可能把对话原文渲染进页面）
+if grep -rqE 'sk-[A-Za-z0-9_-]{20,}|AIza[0-9A-Za-z_-]{35}|gh[pousr]_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}' dist --include='*.html' --include='*.xml' 2>/dev/null; then
   die "产物 HTML 里有疑似密钥，检查 build.py 是否把对话原文渲染进页面"
 fi
 ok "没有密钥泄漏"
