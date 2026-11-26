@@ -49,6 +49,8 @@ say "4/5 自检产物"
 
 # 4a. 每个静态资源都能被引用到
 [ -f dist/style.css ] || die "缺 dist/style.css"
+[ -f dist/app.js ] || die "缺 dist/app.js"
+[ -f dist/favicon.svg ] || die "缺 dist/favicon.svg"
 [ -f dist/feed.xml ] || die "缺 dist/feed.xml"
 [ -f dist/sitemap.xml ] || die "缺 dist/sitemap.xml"
 [ -f dist/404.html ] || die "缺 dist/404.html"
