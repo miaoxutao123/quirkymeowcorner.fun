@@ -1,0 +1,31 @@
+{
+  "site": {
+    "title": "有产出的日子",
+    "tagline": "把做出来的东西记下来",
+    "description": "一个记录产出、作品与思考的地方。数据来自真实的提交记录。",
+    "url": "https://blog.example.com",
+    "lang": "zh-CN",
+    "author": "miaomiao"
+  },
+  "nav": [
+    { "key": "log", "label": "日志", "path": "/log/" },
+    { "key": "works", "label": "作品", "path": "/works/" },
+    { "key": "thoughts", "label": "思考", "path": "/thoughts/" }
+  ],
+  "sections": {
+    "log": {
+      "title": "日志",
+      "desc": "做东西的过程。踩了什么坑，怎么绕过去的。"
+    },
+    "works": {
+      "title": "作品",
+      "desc": "做完的东西。能跑、能看、能用的。"
+    },
+    "thoughts": {
+      "title": "思考",
+      "desc": "和 agent 聊完之后留下的判断。不一定对，但都是自己想的。"
+    }
+  },
+  "ledger": "../ledger/data/days.json",
+  "ledgerSummary": "../ledger/data/summary.json"
+}

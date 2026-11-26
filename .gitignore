@@ -1,0 +1,14 @@
+# 构建产物，不入库
+dist/
+# 截图与本地验证用的临时文件
+.shot/
+.tmp/
+# Node / Wrangler 本地状态
+node_modules/
+.wrangler/
+# Python
+__pycache__/
+*.pyc
+# 系统
+.DS_Store
+Thumbs.db
