@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>怪猫角落</title>
+  <rect width="64" height="64" rx="14" fill="#1c1b22"/>
+  <path d="M14 26 L12.5 12 L25 18.5 Z" fill="#f2b544"/>
+  <path d="M50 26 L51.5 12 L39 18.5 Z" fill="#f2b544"/>
+  <path d="M15.5 25 L14.6 16.2 L22.2 20.2 Z" fill="#1c1b22" opacity=".55"/>
+  <path d="M48.5 25 L49.4 16.2 L41.8 20.2 Z" fill="#1c1b22" opacity=".55"/>
+  <path d="M32 17c-9.4 0-17 7.1-17 15.9 0 9 7.6 16.1 17 16.1s17-7.1 17-16.1C49 24.1 41.4 17 32 17z" fill="#f2b544"/>
+  <circle cx="24.6" cy="32.4" r="4.1" fill="#1c1b22"/>
+  <circle cx="23.2" cy="31" r="1.35" fill="#f7f3ea"/>
+  <path d="M36.2 29.3l5.6 5.6M41.8 29.3l-5.6 5.6" stroke="#1c1b22" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M29.4 40.2q2.6 2.4 5.2 0" stroke="#1c1b22" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <path d="M8 33.4h8.4M9.6 38.6l7.6 2.4M55.8 33.4H47.4M54.2 38.6l-7.6 2.4"
+        stroke="#f2b544" stroke-width="2" stroke-linecap="round" fill="none" opacity=".8"/>
+  <circle cx="14.5" cy="25.6" r="2.3" fill="#e0685f" opacity=".8"/>
+  <circle cx="49.5" cy="25.6" r="2.3" fill="#e0685f" opacity=".8"/>
+</svg>

@@ -127,7 +127,13 @@ def render(md):
                 "<tr>" + "".join(f"<td>{_inline(c)}</td>" for c in r) + "</tr>"
                 for r in rows
             )
-            out.append(f"<table><thead><tr>{th}</tr></thead><tbody>{tb}</tbody></table>")
+            # 表格外面套一层滚动容器。
+            # 不能直接给 table 加 display:block 来做横向滚动——那会把
+            # table 布局干掉，表格缩成内容宽度，在宽屏上只占左边一小块。
+            out.append(
+                f'<div class="table-wrap"><table><thead><tr>{th}</tr></thead>'
+                f"<tbody>{tb}</tbody></table></div>"
+            )
             continue
 
         # 引用块（连续 > 行合并）

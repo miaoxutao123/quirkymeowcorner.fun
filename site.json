@@ -1,11 +1,13 @@
 {
   "site": {
-    "title": "有产出的日子",
+    "title": "怪猫角落",
+    "titleEn": "Quirky Meow Corner",
     "tagline": "把做出来的东西记下来",
-    "description": "一个记录产出、作品与思考的地方。数据来自真实的提交记录。",
-    "url": "https://blog.example.com",
+    "description": "一个记录产出、作品与思考的角落。数据来自真实的提交记录，不粉饰，不凑数。",
+    "url": "https://quirkymeowcorner.fun",
     "lang": "zh-CN",
-    "author": "miaomiao"
+    "author": "miaomiao",
+    "favicon": "/favicon.svg"
   },
   "nav": [
     { "key": "log", "label": "日志", "path": "/log/" },

@@ -25,6 +25,18 @@ DIST = ROOT / "dist"
 
 FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.S)
 
+# 猫头标志的内联版本，用在顶栏。和 assets/favicon.svg 是同一只猫，
+# 但去掉外框、只留脸，在 30px 尺寸下更清楚。
+CAT_SVG = """<svg viewBox="4 8 56 52" xmlns="http://www.w3.org/2000/svg" focusable="false">
+<path d="M14 26 L12.5 12 L25 18.5 Z" fill="var(--warm)"/>
+<path d="M50 26 L51.5 12 L39 18.5 Z" fill="var(--warm)"/>
+<path d="M32 17c-9.4 0-17 7.1-17 15.9 0 9 7.6 16.1 17 16.1s17-7.1 17-16.1C49 24.1 41.4 17 32 17z" fill="var(--warm)"/>
+<circle cx="24.6" cy="32.4" r="4.1" fill="var(--ink)"/>
+<path d="M36.2 29.3l5.6 5.6M41.8 29.3l-5.6 5.6" stroke="var(--ink)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+<path d="M29.4 40.2q2.6 2.4 5.2 0" stroke="var(--ink)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+<path d="M8 34h8M10 39l7 2M56 34h-8M54 39l-7 2" stroke="var(--warm)" stroke-width="2" stroke-linecap="round" fill="none" opacity=".75"/>
+</svg>"""
+
 
 # ---------- front matter ----------
 
@@ -173,19 +185,26 @@ def build_calendar(days, lo, hi):
         else:
             level = 0
         ms = " ms" if rec and rec.get("milestone") else ""
-        title = iso
         if rec:
             # 只有真有产出的日子才生成落地页，也只有它们才给链接。
             # 空白格子做成链接的话，日历上 390 天里有 276 天是死链。
-            title += f" · {rec['commits']} 次提交 · {rec['score']} 分"
+            proj = "、".join(list(rec.get("repo_breakdown") or {})[:2])
+            info = f"<b>{iso}</b>"
+            if rec["commits"]:
+                info += f"　{rec['commits']} 次提交"
+            info += f"　{rec['score']} 分"
+            if proj:
+                info += f"<br>{html.escape(proj)}"
             cells.append(
                 f'<a class="cell l{level}{ms}" style="grid-row:{dow + 1};'
-                f'grid-column:{week + 1}" href="/day/{iso}/" title="{title}"></a>'
+                f'grid-column:{week + 1}" href="/day/{iso}/" '
+                f'data-info="{html.escape(info, quote=True)}" '
+                f'title="{iso} · {rec["commits"]} 次提交 · {rec["score"]} 分"></a>'
             )
         else:
             cells.append(
                 f'<span class="cell l0" style="grid-row:{dow + 1};'
-                f'grid-column:{week + 1}" title="{title}"></span>'
+                f'grid-column:{week + 1}" title="{iso} · 没有记录"></span>'
             )
         if d.month != last_month:
             months.append((week, d))
@@ -234,7 +253,10 @@ def page(title, description, body, cfg, active="", extra_head=""):
         title=html.escape(title),
         description=html.escape(description),
         site_title=html.escape(cfg["site"]["title"]),
+        site_title_en=html.escape(cfg["site"].get("titleEn", "")),
         site_url=cfg["site"]["url"].rstrip("/"),
+        favicon=cfg["site"].get("favicon", "/favicon.svg"),
+        cat_svg=CAT_SVG,
         nav=nav_html,
         body=body,
         year=datetime.now().year,
@@ -248,7 +270,8 @@ def post_card(p):
         tags = '<span class="tags">' + "".join(
             f'<span class="tag">{html.escape(t)}</span>' for t in p["tags"]
         ) + "</span>"
-    return f"""<article class="card">
+    tag_attr = html.escape("|".join(p["tags"]), quote=True)
+    return f"""<article class="card" data-reveal data-tags="{tag_attr}">
   <a class="card-link" href="{p['url']}">
     <div class="card-meta"><time>{p['date_str']}</time>{tags}</div>
     <h3>{html.escape(p['title'])}</h3>
@@ -278,12 +301,17 @@ def build_index(cfg, posts, days, summary):
 </div>"""
 
     body = f"""<section class="hero">
-  <h1>{html.escape(cfg['site']['title'])}</h1>
+  <h1>在<span class="poke">怪猫</span>的角落，<br>记下做出来的东西</h1>
   <p class="tagline">{html.escape(cfg['site']['tagline'])}</p>
   <p class="desc">{html.escape(cfg['site']['description'])}</p>
+  <div class="hero-meta">
+    <span class="pill">已记 <b>{summary.get('active_days', 0)}</b> 个有产出的日子</span>
+    <span class="pill">文章 <b>{len(published)}</b> 篇</span>
+    <span class="pill">数据截至 <b>{summary.get('generated_at', '')[:10] or '—'}</b></span>
+  </div>
 </section>
 
-<section class="cal-section">
+<section class="cal-section" data-reveal>
   <div class="sec-head">
     <h2>产出日历</h2>
     <p>每一格是一天。颜色越深，那天做得越多。点进去看当天到底写了什么。</p>
@@ -292,25 +320,28 @@ def build_index(cfg, posts, days, summary):
   {stats}
 </section>
 
-<section class="sections">
+<section class="sections" data-reveal>
   <div class="sec-grid">
     <a class="sec-card" href="/log/">
       <h3>{cfg['sections']['log']['title']} <span class="count">{counts['log']}</span></h3>
       <p>{cfg['sections']['log']['desc']}</p>
+      <span class="arrow" aria-hidden="true">→</span>
     </a>
     <a class="sec-card" href="/works/">
       <h3>{cfg['sections']['works']['title']} <span class="count">{counts['works']}</span></h3>
       <p>{cfg['sections']['works']['desc']}</p>
+      <span class="arrow" aria-hidden="true">→</span>
     </a>
     <a class="sec-card" href="/thoughts/">
       <h3>{cfg['sections']['thoughts']['title']} <span class="count">{counts['thoughts']}</span></h3>
       <p>{cfg['sections']['thoughts']['desc']}</p>
+      <span class="arrow" aria-hidden="true">→</span>
     </a>
   </div>
 </section>
 
-<section class="recent">
-  <div class="sec-head"><h2>最近</h2></div>
+<section class="recent" data-reveal>
+  <div class="sec-head"><h2>最近写的</h2></div>
   <div class="cards">{latest_html}</div>
 </section>"""
 
@@ -321,11 +352,27 @@ def build_section(cfg, section, posts):
     items = [p for p in posts if p["section"] == section and not p["draft"]]
     meta = cfg["sections"][section]
     cards = "".join(post_card(p) for p in items) or '<p class="empty">这一栏还是空的。</p>'
+
+    # 标签筛选：把所有标签聚起来做成 chip，只有一个标签时不显示（没意义）
+    all_tags = []
+    for p in items:
+        for t in p["tags"]:
+            if t not in all_tags:
+                all_tags.append(t)
+    filter_html = ""
+    if len(all_tags) > 1:
+        chips = ['<button class="chip on" type="button" data-tag="*">全部</button>']
+        chips += [f'<button class="chip" type="button" data-tag="{html.escape(t)}">'
+                  f'{html.escape(t)}</button>' for t in all_tags]
+        filter_html = '<div class="filter-bar" id="filterBar">' + "".join(chips) + "</div>"
+
     body = f"""<section class="sec-head page-head">
   <h1>{meta['title']}</h1>
   <p>{meta['desc']}</p>
 </section>
-<div class="cards">{cards}</div>"""
+{filter_html}
+<div class="cards">{cards}</div>
+<p class="filter-empty" id="filterEmpty">这个标签下还没有文章。</p>"""
     return page(f"{meta['title']} · {cfg['site']['title']}", meta["desc"], body, cfg, active=section)
 
 
@@ -365,13 +412,14 @@ def build_day(cfg, d, posts):
                 f"<li><code>{html.escape(h['repo'])}</code> {tag}"
                 f"{html.escape(h['text'])}</li>"
             )
-        hl = '<h2>当天做了什么</h2><ul class="hl">' + "".join(parts) + "</ul>"
+        hl = '<h2 class="plain">当天做了什么</h2><ul class="hl">' + "".join(parts) + "</ul>"
 
     types = ""
     if d["types"]:
-        types = '<h2>提交类型</h2><p class="types">' + "　".join(
-            f"{k} {v}" for k, v in d["types"].items()
-        ) + "</p>"
+        chips = "".join(
+            f"<span>{html.escape(k)} <b>{v}</b></span>" for k, v in d["types"].items()
+        )
+        types = f'<h2 class="plain">提交类型</h2><div class="types">{chips}</div>'
 
     rel = ""
     if related:
@@ -379,14 +427,20 @@ def build_day(cfg, d, posts):
     else:
         rel = '<p class="empty">这天还没有写成文章。</p>'
 
+    proj = "、".join(d["projects"]) if d["projects"] else "—"
     body = f"""<section class="day-head">
   <div class="post-meta"><time>{d['date']} {d['weekday']}</time></div>
   <h1>{d['date']}</h1>
-  <p class="day-stat">提交 {d['commits']} 次　·　强度 {d['score']}　·　涉及 {len(d['projects'])} 个项目</p>
+  <p class="day-stat">
+    <span>提交 <b>{d['commits']}</b> 次</span><span class="sep">·</span>
+    <span>强度 <b>{d['score']}</b></span><span class="sep">·</span>
+    <span><b>{len(d['projects'])}</b> 个项目</span>
+  </p>
+  <p class="day-stat"><span>{html.escape(proj)}</span></p>
 </section>
 {hl}
 {types}
-<h2>相关文章</h2>
+<h2 class="plain">相关文章</h2>
 {rel}
 <p class="back"><a href="/">← 回到日历</a></p>"""
     return page(f"{d['date']} · {cfg['site']['title']}", f"{d['date']} 的产出记录", body, cfg)
