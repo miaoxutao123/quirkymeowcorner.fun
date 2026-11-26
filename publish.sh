@@ -38,6 +38,10 @@ n_md=$(find content -name '*.md' 2>/dev/null | wc -l | tr -d ' ')
 [ "$n_md" -gt 0 ] || die "content/ 下没有 Markdown"
 ok "找到 $n_md 篇 Markdown"
 
+# 产出数据快照：从上级 ledger/ 同步过来。
+# 站点是独立仓库，ledger 在仓库外，不同步的话云端构建读不到数据。
+bash sync-data.sh || die "同步产出数据失败"
+
 # ---------- 3. 构建 ----------
 say "3/5 生成站点"
 python build.py || die "构建失败"
@@ -63,6 +67,20 @@ if grep -rqE '\{\{[a-zA-Z_]+\}\}' dist --include='*.html'; then
   die "模板占位符没有被替换"
 fi
 ok "模板变量全部替换"
+
+# 4b-2. 产物和即将提交的数据里不能有密钥。
+# 这道守卫是被 GitHub 的 secret scanning 拦下来之后补的：days.json 的
+# conv_samples 存的是对话原文，里面有当时贴进去的真实 API Key，
+# 推到公开仓库等于公开泄漏。
+if ! python sanitize_data.py --check >/dev/null 2>&1; then
+  echo "  数据里有疑似密钥，已阻止提交：" >&2
+  python sanitize_data.py --check 2>&1 | sed 's/^/  /' >&2
+  die "先跑 python sanitize_data.py 清理"
+fi
+if grep -rqE 'sk-[A-Za-z0-9_-]{20,}|ghp_[A-Za-z0-9]{20,}|AKIA[0-9A-Z]{16}' dist --include='*.html' --include='*.xml' 2>/dev/null; then
+  die "产物 HTML 里有疑似密钥，检查 build.py 是否把对话原文渲染进页面"
+fi
+ok "没有密钥泄漏"
 
 # 4c. 不能有本地绝对路径泄漏
 if grep -rqE 'file:///|[A-Za-z]:\\\\' dist --include='*.html'; then
@@ -95,7 +113,45 @@ if bad:
 PY
 ok "站内链接全部可达"
 
-# 4e. 文章页数量对得上
+# 4e. 日历必须真有内容。
+# 线上曾经出现过整片空日历、首屏写着"已记 0 个有产出的日子"却构建成功的情况，
+# 所以这里直接断言产物里有非零的日历格子和真实的提交数。
+python - <<'PY' || die "日历没有内容"
+import re, sys
+from pathlib import Path
+
+html = Path("dist/index.html").read_text(encoding="utf-8")
+
+# 有产出的格子是 <a class="cell l1..l4">，空白日是 <span class="cell l0">。
+# 图例里的样例格子也是 <i class="cell lN">，所以必须按标签名限定，
+# 否则会把图例的 5 个样本算进来（114 天会显示成 119）。
+active = len(re.findall(r'<a class="cell l[1-4]', html))
+if active == 0:
+    print("  首页日历里没有任何带产出的格子（全是 l0）", file=sys.stderr)
+    sys.exit(1)
+
+m = re.search(r'已记 <b>(\d+)</b>', html)
+if not m or int(m.group(1)) == 0:
+    print("  首屏统计显示有产出的日子为 0", file=sys.stderr)
+    sys.exit(1)
+
+# 数据截至不能是占位符
+if "数据截至 <b>—</b>" in html:
+    print("  首屏「数据截至」是空的", file=sys.stderr)
+    sys.exit(1)
+
+# 日历上可点的天数应当和首屏「已记 N 天」对得上。
+# 对不上的话说明数据统计和日历渲染用了两套口径，是更隐蔽的 bug。
+days = int(m.group(1))
+if active != days:
+    print(f"  日历格子 {active} 个，但首屏写着已记 {days} 天", file=sys.stderr)
+    sys.exit(1)
+
+print(f"  日历 {active} 个有产出的格子，与「已记 {days} 天」一致")
+PY
+ok "日历有实际内容"
+
+# 4f. 文章页数量对得上
 n_posts=$(find dist -mindepth 2 -maxdepth 2 -name 'index.html' -path '*/log/*' -o -mindepth 2 -maxdepth 2 -name 'index.html' -path '*/works/*' -o -mindepth 2 -maxdepth 2 -name 'index.html' -path '*/thoughts/*' | wc -l | tr -d ' ')
 [ "$n_posts" -ge 1 ] || die "没有生成任何文章页"
 ok "文章页 $n_posts 个"

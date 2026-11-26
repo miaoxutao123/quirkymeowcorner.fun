@@ -2,6 +2,7 @@
 dist/
 # 截图与本地验证用的临时文件
 .shot/
+.s/
 .tmp/
 # Node / Wrangler 本地状态
 node_modules/

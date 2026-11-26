@@ -28,8 +28,8 @@
       "desc": "和 agent 聊完之后留下的判断。不一定对，但都是自己想的。"
     }
   },
-  "ledger": "../ledger/data/days.json",
-  "ledgerSummary": "../ledger/data/summary.json",
+  "ledger": "data/days.json",
+  "ledgerSummary": "data/summary.json",
   "icp": {
     "number": "晋ICP备2024039567号-1",
     "url": "https://beian.miit.gov.cn/",

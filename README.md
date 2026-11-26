@@ -24,9 +24,11 @@ blog/
 │   └── thoughts/       #   思考：和 agent 聊完的判断
 ├── templates/base.html # 页面骨架
 ├── assets/style.css    # 全部样式
+├── data/               # 产出数据快照（days.json / summary.json）
 ├── site.json           # 站点配置（标题、栏目、产出数据路径）
 ├── build.py            # 生成器
 ├── mdrender.py         # Markdown 渲染
+├── sync-data.sh        # 从 ../ledger 同步数据快照
 ├── publish.sh          # 一键发布
 └── dist/               # 产物，不入库
 ```
@@ -79,9 +81,21 @@ draft: false
 
 ## 产出日历
 
-首页的日历数据来自 `../ledger/data/days.json`，路径写在 `site.json` 里。
+首页的日历数据来自仓库内的 `data/days.json` 与 `data/summary.json` 两个快照，
+路径写在 `site.json` 里。
 
-改了 ledger 的数据后，重新跑 `./publish.sh` 就会同步。找不到数据文件时不会报错，只是日历区留空。
+**为什么是快照，不是直接读 `../ledger/`。** 本站是一个独立仓库（根目录就是 `blog/`），
+`ledger/` 在仓库外面，云端构建根本看不到它。早先 `site.json` 直接指向
+`../ledger/data/days.json`，本地预览一切正常——因为本地那个目录在；
+推上线后目录不存在，构建照样"成功"，日历整片空白、首屏写着
+「已记 0 个有产出的日子」。**数据缺失属于配置错误，不该被静默降级掩盖。**
+
+现在两侧都收紧了：
+
+- `sync-data.sh` 从 `../ledger/data/` 拷贝快照进仓库，`publish.sh` 每次自动调用。
+  ledger 目录不存在时（CI 里、或别人只 clone 本站）跳过，不会报错。
+- `build.py` 读不到数据或数据为空时**直接报错退出**，不再渲染空日历。
+- `publish.sh` 的产物自检会断言日历里有真实格子，且格子数与「已记 N 天」一致。
 
 日历上的格子只有**有产出的日子**才可点击。空白日是静态格子——早先做成链接，结果 390 天里 276 天是死链。
 

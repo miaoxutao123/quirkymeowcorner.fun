@@ -353,15 +353,18 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .cal-months span { position: absolute; top: 0; line-height: 17px; }
 
+/* 格子尺寸由 build.py 通过 --cell / --gap 注入，因为宽度要按周数算。
+   CSS 里只留默认值，两边不要各写一份数字——早先就是 build.py 算 13px 列距、
+   CSS 写 10px+3px，看着一致，实际总宽对不上，最右侧两列被裁在滚动区外。 */
 .cal {
   display: grid;
   grid-auto-flow: column;
-  grid-template-rows: repeat(7, 10px);
-  gap: 3px;
+  grid-template-rows: repeat(7, var(--cell, 10px));
+  gap: var(--gap, 2px);
 }
 .cell {
-  width: 10px;
-  height: 10px;
+  width: var(--cell, 10px);
+  height: var(--cell, 10px);
   border-radius: 2.5px;
   background: var(--l0);
   display: block;

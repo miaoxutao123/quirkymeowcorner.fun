@@ -139,14 +139,34 @@ def load_posts():
 
 
 def load_ledger(cfg):
-    """读产出日历数据。路径写在 site.json 里，指不到就退化为空，不让构建挂掉。"""
+    """读产出日历数据。
+
+    这里故意选"缺数据就报错退出"，而不是打条警告然后渲染一个空日历。
+    上一次线上就是这么炸的：site.json 指向 ../ledger/，而 git 仓库根是 blog/，
+    云端构建时那个目录根本不存在，构建照样成功、日历整片空白、
+    "已记 0 个有产出的日子"，但本地预览一切正常——因为本地那个目录在。
+    数据缺失属于配置错误，不该被静默降级掩盖。
+    """
     days_path = (ROOT / cfg.get("ledger", "")).resolve()
     sum_path = (ROOT / cfg.get("ledgerSummary", "")).resolve()
+
     if not days_path.exists():
-        print(f"  警告：没找到产出数据 {days_path}，日历区会留空", file=sys.stderr)
-        return [], {}
+        raise SystemExit(
+            f"错误：找不到产出数据 {days_path}\n"
+            "  日历依赖 data/days.json 与 data/summary.json 两个快照，"
+            "它们必须提交进仓库，云端构建才读得到。\n"
+            "  从 ledger 同步：./sync-data.sh"
+        )
+    if not sum_path.exists():
+        raise SystemExit(f"错误：找不到汇总数据 {sum_path}\n  从 ledger 同步：./sync-data.sh")
+
     days = json.loads(days_path.read_text(encoding="utf-8"))
-    summary = json.loads(sum_path.read_text(encoding="utf-8")) if sum_path.exists() else {}
+    summary = json.loads(sum_path.read_text(encoding="utf-8"))
+
+    # 空数组也能让构建"成功"，但页面会是一张全灰的日历。同样当错误处理。
+    if not days:
+        raise SystemExit(f"错误：{days_path.name} 是空数组，日历没有内容可画")
+
     return days, summary
 
 
@@ -158,8 +178,19 @@ def build_calendar(days, lo, hi):
     布局要点：格子用 grid 显式定位，月份标签用绝对定位挂在同一个滚动画布上。
     早先试过让标签也走 grid，结果 57 列的总宽超出容器，标签被挤成两行、
     和格子完全对不上——标签宽度天生大于格子宽度，不能同用一套列轨。
+
+    尺寸按周数动态算，不写死：一年 53 周加上首尾对齐会到 57 列，
+    10px+3px 的间距排下来 738px，比容器内容区（760-40 的 wrap 再减
+    cal-box 的 40 padding = 680px）宽出去 58px，最右两列直接被裁在
+    滚动区外面——最新两周的数据要拖才能看到，这等于把最重要的部分藏了。
+    所以先算可用宽度，再反推格子大小。
     """
     from datetime import timedelta
+
+    CELL_MAX, CELL_MIN, GAP = 10, 7, 2
+    # .wrap 是 min(100% - 40px, 760px)、border-box 且无 padding，内容宽 760。
+    # .cal-box 也是 border-box，左右各 20px padding + 1px border，内容宽 718。
+    AVAIL = 760 - 2 * (20 + 1)
 
     by_date = {d["date"]: d for d in days}
     start = date.fromisoformat(lo)
@@ -204,8 +235,13 @@ def build_calendar(days, lo, hi):
                 f'<span class="cell l0" style="grid-row:{dow + 1};'
                 f'grid-column:{week + 1}" title="{iso} · 没有记录"></span>'
             )
+        # 月份标签只在统计区间内收集。
+        # 第一列是对齐到周日的填充格，可能落在上一个月的尾巴上——
+        # 如果不过滤，2025-11-01 的对齐填充会带出一个 "10月" 标签，
+        # 和 "11月" 一起挤在第 0 列，两个标签重叠成黑块。
         if d.month != last_month:
-            months.append((week, d))
+            if d >= date.fromisoformat(lo):
+                months.append((week, d))
             last_month = d.month
         d += timedelta(days=1)
         idx += 1
@@ -216,16 +252,30 @@ def build_calendar(days, lo, hi):
     month_html = []
     for w, dd in months:
         label = f"{dd.year} 1月" if dd.month == 1 else f"{dd.month}月"
-        month_html.append(f'<span style="left:{w * 13}px">{label}</span>')
+        month_html.append((w, label))
 
     weeks = idx // 7 + 1
+
+    # 反推格子大小：先按上限排，排不下就缩，缩到下限为止。
+    # 下限 7px 是因为再小 hover 目标就太窄了，手机上点不中。
+    cell = CELL_MAX
+    while cell > CELL_MIN and weeks * cell + (weeks - 1) * GAP > AVAIL:
+        cell -= 1
+    col = cell + GAP
+    total = weeks * cell + (weeks - 1) * GAP
+
+    month_spans = "".join(
+        f'<span style="left:{w * col}px">{html.escape(label)}</span>'
+        for w, label in month_html
+    )
+
     span_lo = date.fromisoformat(lo).strftime("%Y.%m")
     span_hi = date.fromisoformat(hi).strftime("%Y.%m")
-    return f"""<div class="cal-box">
+    return f"""<div class="cal-box" style="--cell:{cell}px;--gap:{GAP}px">
   <div class="cal-scroll">
-    <div class="cal-inner" style="width:{weeks * 13}px">
-      <div class="cal-months">{''.join(month_html)}</div>
-      <div class="cal" style="grid-template-columns:repeat({weeks},10px)">
+    <div class="cal-inner" style="width:{total}px">
+      <div class="cal-months">{month_spans}</div>
+      <div class="cal" style="grid-template-columns:repeat({weeks},{cell}px)">
         {''.join(cells)}
       </div>
     </div>

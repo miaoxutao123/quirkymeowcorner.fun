@@ -1,0 +1,3483 @@
+[
+ {
+  "date": "2025-11-06",
+  "weekday": "Thu",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_LLMPerception"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_LLMPerception": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_LLMPerception",
+    "type": "新功能",
+    "text": "add group name perception and bump to v1.1.0"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-08",
+  "weekday": "Sat",
+  "commits": 9,
+  "files": 0,
+  "score": 28.0,
+  "milestone": true,
+  "projects": [
+   "miaomiao-halo-blog"
+  ],
+  "repo_breakdown": {
+   "miaomiao-halo-blog": 9
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "新功能",
+    "text": "setup elog sync workflow"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "miaomiao-halo-blog",
+   "commits": 9,
+   "angle": "setup elog sync workflow"
+  },
+  "private_commits": 9
+ },
+ {
+  "date": "2025-11-09",
+  "weekday": "Sun",
+  "commits": 17,
+  "files": 0,
+  "score": 52.0,
+  "milestone": true,
+  "projects": [
+   "miaomiao-halo-blog"
+  ],
+  "repo_breakdown": {
+   "miaomiao-halo-blog": 17
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "添加详细调试日志以诊断 GitHub Actions 问题"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "触发测试：验证 URL encoded form 修复"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复 ImgBB API：使用 URL encoded form 替代 multipart form"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "触发测试：验证 ImgBB 上传修复"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复 ImgBB API 调用格式"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "更新文章时间，触发图片上传测试"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "miaomiao-halo-blog",
+   "commits": 17,
+   "angle": "触发调试日志测试"
+  },
+  "private_commits": 17
+ },
+ {
+  "date": "2025-11-10",
+  "weekday": "Mon",
+  "commits": 8,
+  "files": 0,
+  "score": 25.0,
+  "milestone": true,
+  "projects": [
+   "miaomiao-halo-blog"
+  ],
+  "repo_breakdown": {
+   "miaomiao-halo-blog": 8
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "测试: 再次触发 ImageHub 自动上传工作流"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复: GitHub Actions YAML 语法错误"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "重构: 使用 ImageHub 替代 ImgBB 作为图床服务"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复：禁用图片上传时避免加载图片处理模块"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "临时方案：禁用GitHub Actions中的图片自动上传"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "最终测试：使用 imgbb-uploader 库"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "miaomiao-halo-blog",
+   "commits": 8,
+   "angle": "测试: 再次触发 ImageHub 自动上传工作流"
+  },
+  "private_commits": 8
+ },
+ {
+  "date": "2025-11-11",
+  "weekday": "Tue",
+  "commits": 10,
+  "files": 0,
+  "score": 31.0,
+  "milestone": true,
+  "projects": [
+   "miaomiao-halo-blog"
+  ],
+  "repo_breakdown": {
+   "miaomiao-halo-blog": 10
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "Merge branch 'main' of https://github.com/miaoxutao123/miaomiao-halo-blog"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "测试: 第六次触发 - 使用正确的 API 格式"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复: 使用正确的 X-API-Key header"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "测试: 第五次触发 - 测试 Chevereto API 格式"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "修复: 使用正确的 Chevereto API 格式"
+   },
+   {
+    "repo": "miaomiao-halo-blog",
+    "type": "",
+    "text": "测试: 第四次触发 - 测试修复后的上传功能"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "miaomiao-halo-blog",
+   "commits": 10,
+   "angle": "Merge branch 'main' of https://github.com/miaoxutao123/miaomiao-halo-blog"
+  },
+  "private_commits": 10
+ },
+ {
+  "date": "2025-11-13",
+  "weekday": "Thu",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "miaomiao-halo-blog"
+  ],
+  "repo_breakdown": {
+   "miaomiao-halo-blog": 1
+  },
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 1
+ },
+ {
+  "date": "2025-11-18",
+  "weekday": "Tue",
+  "commits": 5,
+  "files": 0,
+  "score": 16.0,
+  "milestone": true,
+  "projects": [
+   "deepseek-ocr-translate"
+  ],
+  "repo_breakdown": {
+   "deepseek-ocr-translate": 5
+  },
+  "types": {
+   "文档": 2
+  },
+  "highlights": [
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "文档",
+    "text": "精简 README，使其更加简洁清晰"
+   },
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "",
+    "text": "Merge remote LICENSE with local changes"
+   },
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "",
+    "text": "Initial commit: OCR & Translation System"
+   },
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "",
+    "text": "Initial commit"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "deepseek-ocr-translate",
+   "commits": 5,
+   "angle": "docs: 移除截图部分"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-20",
+  "weekday": "Thu",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "deepseek-ocr-translate"
+  ],
+  "repo_breakdown": {
+   "deepseek-ocr-translate": 1
+  },
+  "types": {
+   "杂务": 1
+  },
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-21",
+  "weekday": "Fri",
+  "commits": 5,
+  "files": 0,
+  "score": 16.0,
+  "milestone": true,
+  "projects": [
+   "deepseek-ocr-translate"
+  ],
+  "repo_breakdown": {
+   "deepseek-ocr-translate": 5
+  },
+  "types": {
+   "修复": 4,
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "修复",
+    "text": "降级前端依赖版本以提高兼容性"
+   },
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "修复",
+    "text": "修复 Linux 启动脚本"
+   },
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "修复",
+    "text": "修复 Windows 启动脚本"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "deepseek-ocr-translate",
+   "commits": 5,
+   "angle": "增强翻译功能"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-22",
+  "weekday": "Sat",
+  "commits": 3,
+  "files": 0,
+  "score": 10.0,
+  "milestone": false,
+  "projects": [
+   "deepseek-ocr-translate"
+  ],
+  "repo_breakdown": {
+   "deepseek-ocr-translate": 3
+  },
+  "types": {
+   "新功能": 2,
+   "文档": 1
+  },
+  "highlights": [
+   {
+    "repo": "deepseek-ocr-translate",
+    "type": "文档",
+    "text": "更新README添加纠错功能详细说明"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "deepseek-ocr-translate",
+   "commits": 3,
+   "angle": "支持自定义向量维度配置、实现完整的翻译纠错功能"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-24",
+  "weekday": "Mon",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "新功能",
+    "text": "添加防抖功能以优化链接解析，更新版本至 v0.2.14"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-25",
+  "weekday": "Tue",
+  "commits": 5,
+  "files": 0,
+  "score": 16.0,
+  "milestone": true,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 5
+  },
+  "types": {
+   "新功能": 3
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "新功能",
+    "text": "优化防抖功能配置，优化视频处理逻辑"
+   },
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "新功能",
+    "text": "移除防抖检查方法前的事件消息类型过滤器"
+   },
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #54 from vmoranv/master"
+   },
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge branch 'master' into master"
+   },
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "新功能",
+    "text": "优化防抖检查逻辑，确保链接解析的准确性"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_videos_analysis",
+   "commits": 5,
+   "angle": "优化防抖功能配置，优化视频处理逻辑、移除防抖检查方法前的事件消息类型过滤器、优化防抖检查逻辑，确保链接解析的准确性"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-26",
+  "weekday": "Wed",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #55 from piexian/master"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-27",
+  "weekday": "Thu",
+  "commits": 2,
+  "files": 0,
+  "score": 7.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 2
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "添加使用用户配置的Gemini的搜索功能实现的搜索tool"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "",
+    "text": "Initial commit"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-28",
+  "weekday": "Fri",
+  "commits": 4,
+  "files": 0,
+  "score": 13.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 4
+  },
+  "types": {
+   "新功能": 4
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "添加网页抓取工具和学术搜索功能，更新元数据"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "在初始化方法中添加调试信息，打印所有可用的Provider ID"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "更新插件元数据和文档，添加DeepResearch功能描述"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "注册Gemini搜索工具并优化初始化方法"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_AssistantResearchTeam",
+   "commits": 4,
+   "angle": "添加网页抓取工具和学术搜索功能，更新元数据、在初始化方法中添加调试信息，打印所有可用的Provider ID、更新插件元数据和文档，添加DeepResearch功能描述"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-11-30",
+  "weekday": "Sun",
+  "commits": 9,
+  "files": 0,
+  "score": 28.0,
+  "milestone": true,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 9
+  },
+  "types": {
+   "新功能": 7,
+   "修复": 2
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "在ArxivSearchTool中添加调试信息，记录搜索关键词、最大结果数和代理URL"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "增强ArxivSearchTool的错误处理，确保在搜索结果中返回错误信息时能够正确显示"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "更新ArxivSearchTool以支持动态结果限制，允许用户自定义最大搜索结果数量"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "更新ArxivSearchTool以支持动态代理URL配置，增强搜索功能"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "修复ArxivSearchTool中对上下文的引用，确保正确获取scholar_proxy_base_url"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "注册多个工具，包括ArxivSearchTool和SmartReader，以增强功能"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_AssistantResearchTeam",
+   "commits": 9,
+   "angle": "在ArxivSearchTool中添加调试信息，记录搜索关键词、最大结果数和代理URL、更新ArxivSearchTool以支持动态结果限制，允许用户自定义最大搜索结果数量、更新ArxivSearchTool以支持动态代理URL配置，增强搜索功能"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-02",
+  "weekday": "Tue",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "添加文档处理工具，支持Markdown与Word文档的创建、读取、写入和删除"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-03",
+  "weekday": "Wed",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "新增文件发送工具并优化参数校验与路径配置1. 新增 SendFileTool 工具：   - 支持通过 AstrBot 发送本地文件（如 .docx, .pdf, .md）给用户"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-04",
+  "weekday": "Thu",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "AstrBot-docs"
+  ],
+  "repo_breakdown": {
+   "AstrBot-docs": 1
+  },
+  "types": {
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "AstrBot-docs",
+    "type": "修复",
+    "text": "将 field 替换为 Field 以符合 Pydantic 模型定义规范"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-05",
+  "weekday": "Fri",
+  "commits": 4,
+  "files": 0,
+  "score": 13.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 4
+  },
+  "types": {
+   "新功能": 1,
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "修改默认的review provider ID"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "修正文档处理器名称拼写错误"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_AssistantResearchTeam",
+   "commits": 4,
+   "angle": "修改默认的review provider ID"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-08",
+  "weekday": "Mon",
+  "commits": 8,
+  "files": 0,
+  "score": 25.0,
+  "milestone": true,
+  "projects": [
+   "hexo_site_publish"
+  ],
+  "repo_breakdown": {
+   "hexo_site_publish": 8
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "hexo_site_publish",
+    "type": "",
+    "text": "Update profile and remove lab reference"
+   },
+   {
+    "repo": "hexo_site_publish",
+    "type": "",
+    "text": "Merge branch 'main' of https://github.com/miaoxutao123/hexo_site_publish"
+   },
+   {
+    "repo": "hexo_site_publish",
+    "type": "",
+    "text": "Install Live2D and Lycoris CSS"
+   },
+   {
+    "repo": "hexo_site_publish",
+    "type": "",
+    "text": "Create deploy.yml"
+   },
+   {
+    "repo": "hexo_site_publish",
+    "type": "",
+    "text": "Hexo init and deploy config"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "hexo_site_publish",
+   "commits": 8,
+   "angle": "```"
+  },
+  "private_commits": 8
+ },
+ {
+  "date": "2025-12-09",
+  "weekday": "Tue",
+  "commits": 2,
+  "files": 0,
+  "score": 7.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_LLMPerception"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_LLMPerception": 2
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_LLMPerception",
+    "type": "新功能",
+    "text": "新增农历、节气与黄历感知配置项"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2025-12-12",
+  "weekday": "Fri",
+  "commits": 2,
+  "files": 0,
+  "score": 7.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 2
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Update README.md"
+   },
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Update README.md"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-01-08",
+  "weekday": "Thu",
+  "commits": 2,
+  "files": 0,
+  "score": 7.0,
+  "milestone": false,
+  "projects": [
+   "zhiwang"
+  ],
+  "repo_breakdown": {
+   "zhiwang": 2
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "zhiwang",
+    "type": "",
+    "text": "使用Playwright下载Chromium，移除国内镜像源相关代码"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-01-09",
+  "weekday": "Fri",
+  "commits": 4,
+  "files": 0,
+  "score": 13.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 4
+  },
+  "types": {
+   "新功能": 2,
+   "修复": 2
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "增强CNKI搜索工具，支持多种搜索字段和排序选项，更新描述和参数"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "更新Chromium下载提示信息以显示进度"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "修正导入路径以确保模块正确引用"
+   },
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "新功能",
+    "text": "Add CNKI search tool for Chinese academic papers"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_AssistantResearchTeam",
+   "commits": 4,
+   "angle": "增强CNKI搜索工具，支持多种搜索字段和排序选项，更新描述和参数、Add CNKI search tool for Chinese academic papers"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2026-01-11",
+  "weekday": "Sun",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "zhiwang"
+  ],
+  "repo_breakdown": {
+   "zhiwang": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "zhiwang",
+    "type": "新功能",
+    "text": "Enhance CNKI downloader with comprehensive search and download examples"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-01-12",
+  "weekday": "Mon",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "zhiwang"
+  ],
+  "repo_breakdown": {
+   "zhiwang": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "zhiwang",
+    "type": "",
+    "text": "Refactor code structure for improved readability and maintainability"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-01-18",
+  "weekday": "Sun",
+  "commits": 3,
+  "files": 0,
+  "score": 10.0,
+  "milestone": false,
+  "projects": [
+   "AstrBot_plugin_opinion"
+  ],
+  "repo_breakdown": {
+   "AstrBot_plugin_opinion": 3
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "AstrBot_plugin_opinion",
+    "type": "",
+    "text": "Merge pull request #1 from miaoxutao123/codex/extract-source-crawler-from-library"
+   },
+   {
+    "repo": "AstrBot_plugin_opinion",
+    "type": "",
+    "text": "Remove binary docs images"
+   },
+   {
+    "repo": "AstrBot_plugin_opinion",
+    "type": "",
+    "text": "Initialize repository"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "AstrBot_plugin_opinion",
+   "commits": 3,
+   "angle": "Merge pull request #1 from miaoxutao123/codex/extract-source-crawler-from-librar"
+  },
+  "private_commits": 3
+ },
+ {
+  "date": "2026-03-03",
+  "weekday": "Tue",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "AstrBot"
+  ],
+  "repo_breakdown": {
+   "AstrBot": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "AstrBot",
+    "type": "新功能",
+    "text": "add OS information to tool descriptions and implement unit tests (#5677)"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-03-05",
+  "weekday": "Thu",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {
+   "重构": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "重构",
+    "text": "Step 1 - 清理无用代码"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-03-09",
+  "weekday": "Mon",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_AssistantResearchTeam"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_AssistantResearchTeam": 1
+  },
+  "types": {
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_AssistantResearchTeam",
+    "type": "修复",
+    "text": "support markdown tables in docx conversion"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-03-19",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 43,
+  "score": 3.1,
+  "milestone": false,
+  "projects": [
+   "lichuang-esp32-s3-examples-master"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-03-23",
+  "weekday": "Mon",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #58 from miaoxutao123/refactor/modularize"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-01",
+  "weekday": "Wed",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #60 from miaoxutao123/fix-llm-tool-return"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-02",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 1017,
+  "score": 13.1,
+  "milestone": false,
+  "projects": [
+   "NapCat.Framework-v1.0.4",
+   "config",
+   "dist-portable",
+   "static",
+   "worker"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-22",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 0,
+  "score": 0.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "帮我创建一个易于扩展，资源占用低，方便移植部署的个人网站，你可以和我交互询问我问题来完善这个项目"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-25",
+  "weekday": "Sat",
+  "commits": 1,
+  "files": 0,
+  "score": 4.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_LLMPerception"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_LLMPerception": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_LLMPerception",
+    "type": "",
+    "text": "Merge pull request #8 from piexian/master"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-27",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 60,
+  "score": 10.0,
+  "milestone": false,
+  "projects": [
+   "checkpoints",
+   "dist-portable",
+   "idextts2software",
+   "scripts",
+   "sidecar",
+   "src",
+   "src-tauri"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-28",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 7,
+  "score": 5.3,
+  "milestone": false,
+  "projects": [
+   "dist-portable",
+   "scripts",
+   "sidecar",
+   "src-tauri",
+   "tmp-webview2"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-04-29",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 1,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "src-tauri"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-05-06",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 1,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "sidecar"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-05-18",
+  "weekday": "Mon",
+  "commits": 3,
+  "files": 0,
+  "score": 10.0,
+  "milestone": false,
+  "projects": [
+   "astrbot-plugin-zhihu-open"
+  ],
+  "repo_breakdown": {
+   "astrbot-plugin-zhihu-open": 3
+  },
+  "types": {
+   "杂务": 1,
+   "文档": 1,
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot-plugin-zhihu-open",
+    "type": "杂务",
+    "text": "update plugin author metadata"
+   },
+   {
+    "repo": "astrbot-plugin-zhihu-open",
+    "type": "文档",
+    "text": "add license and expand repository metadata"
+   },
+   {
+    "repo": "astrbot-plugin-zhihu-open",
+    "type": "新功能",
+    "text": "add astrbot zhihu open plugin"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot-plugin-zhihu-open",
+   "commits": 3,
+   "angle": "add astrbot zhihu open plugin"
+  },
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-01",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 0,
+  "score": 0.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "使用这个地址的gptimage2生图：https://llmapi.quirkymeowcorner.fun/v1使用这个地址的https://api.futureppo.top/v1的grok-imagine-video-1.5-preview进行图生视频，创建一个工作流实现让gptimage2生成一张含有9个分镜图"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-05",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 0,
+  "score": 0.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "Rewrite the frontend for Qwen3-TTS Voice Studio at:"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-09",
+  "weekday": "Tue",
+  "commits": 1,
+  "files": 19,
+  "score": 10.9,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis",
+   "data",
+   "douyin_scraper",
+   "handlers",
+   "sdk_extract",
+   "services",
+   "utils"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "新功能",
+    "text": "add BrowserSigner - Chromium-based Douyin API signing, fix A-Bogus deprecation"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-16",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 18,
+  "score": 4.9,
+  "milestone": false,
+  "projects": [
+   "gateway",
+   "jlc-bridge",
+   "jlcmcp",
+   "src"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-18",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 0,
+  "score": 1.0,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 3,
+  "conv_samples": [
+   "解决一下这个一直刷新导致音色设计完成后试听听一秒就被打断的问题：INFO:     127.0.0.1:4100 - \"GET /v1/queue HTTP/1.1\" 307 Temporary Redirect",
+   "探索 Qwen3VoiceStudio 项目（根目录 e:\\ai配音\\Qwen3VoiceStudio-Portable-with-models）中，可能导致音色设计完成后试听被频繁轮询打断的问题。",
+   "探索 Qwen3VoiceStudio 项目（根目录 e:\\ai配音\\Qwen3VoiceStudio-Portable-with-models）中，与\"固化\"（prepare）功能相关的代码。"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-20",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 0,
+  "score": 0.7,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 2,
+  "conv_samples": [
+   "编写一个脚本打一发openai key请求，查看key的tier层数：sk-proj-***REDACTED***",
+   "查看这个路径：E:\\test\\ark-chatgpt-character-video-go的项目，根据这个文档改造视频生成模型链路，key使用这个：{\"_type\":\"newapi_channel_conn\",\"key\":\"sk-***REDACTED***"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-06-23",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 0,
+  "score": 0.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "写一个简单的ipynb用于快速测试colab的t4显卡白嫖"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-07-08",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 2,
+  "score": 1.4,
+  "milestone": false,
+  "projects": [
+   "security-20261022"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "构思一个项目，我想让多个不同的llm讨论一个项目/问题，类似于群聊的场景，丰富一下我这个想法然后给出一个可行性报告"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-07-14",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 0,
+  "score": 0.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "页面改成中文，换成更美观更有设计感的页面的不要gradio"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-07-21",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 4,
+  "score": 1.2,
+  "milestone": false,
+  "projects": [
+   "security-20261022"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-08-04",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 3,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "即梦前端"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-08-05",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 1,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "src"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-08-10",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 4,
+  "score": 2.2,
+  "milestone": false,
+  "projects": [
+   "security-20261022",
+   "即梦前端"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-08-13",
+  "weekday": "Thu",
+  "commits": 2,
+  "files": 4,
+  "score": 9.2,
+  "milestone": false,
+  "projects": [
+   "server",
+   "simulation-harness",
+   "src"
+  ],
+  "repo_breakdown": {
+   "simulation-harness": 2
+  },
+  "types": {
+   "新功能": 2
+  },
+  "highlights": [
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "real Pi E2E integration + fix Type.Union→StringEnum"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "Simulation Harness MVP — complete implementation (Phase A-E)"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 2
+ },
+ {
+  "date": "2026-08-14",
+  "weekday": "Fri",
+  "commits": 4,
+  "files": 3,
+  "score": 14.2,
+  "milestone": false,
+  "projects": [
+   "simulation-harness",
+   "即梦前端"
+  ],
+  "repo_breakdown": {
+   "simulation-harness": 4
+  },
+  "types": {
+   "新功能": 3,
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "ngspice external simulator adapter"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "修复",
+    "text": "P0/P1/P2 fixes — NEEDS_USER_INPUT, event dedup, provenance, MCP freeze"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "agent-driven revision + MCP interface stubs + guard hardening"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "custom provider for non-streaming endpoint + E2E verified"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "simulation-harness",
+   "commits": 4,
+   "angle": "ngspice external simulator adapter、agent-driven revision + MCP interface stubs + guard hardening、custom provider for non-streaming endpoint + E2E verified"
+  },
+  "private_commits": 4
+ },
+ {
+  "date": "2026-08-15",
+  "weekday": "Sat",
+  "commits": 5,
+  "files": 12,
+  "score": 17.6,
+  "milestone": true,
+  "projects": [
+   "security-20261022",
+   "simulation-harness"
+  ],
+  "repo_breakdown": {
+   "simulation-harness": 5
+  },
+  "types": {
+   "新功能": 3,
+   "文档": 1,
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "real MCP adapter — stdio transport + integration test"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "cross-domain proof — pendulum physics simulator"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "session recovery — disk-based experiment reconstruction"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "文档",
+    "text": "verification report with actual test results"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "修复",
+    "text": "ngspice parser — page-break handling, dB→linear dc_gain, ngspice_con"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "simulation-harness",
+   "commits": 5,
+   "angle": "real MCP adapter — stdio transport + integration test、cross-domain proof — pendulum physics simulator、session recovery — disk-based experiment reconstruction"
+  },
+  "private_commits": 5
+ },
+ {
+  "date": "2026-08-16",
+  "weekday": "Sun",
+  "commits": 2,
+  "files": 0,
+  "score": 7.0,
+  "milestone": false,
+  "projects": [
+   "simulation-harness"
+  ],
+  "repo_breakdown": {
+   "simulation-harness": 2
+  },
+  "types": {
+   "修复": 1,
+   "新功能": 1
+  },
+  "highlights": [
+   {
+    "repo": "simulation-harness",
+    "type": "修复",
+    "text": "CI uv setup, mujoco→pendulum rename, real CI numbers"
+   },
+   {
+    "repo": "simulation-harness",
+    "type": "新功能",
+    "text": "release hardening — Run IDs, SHA-256, ContextPolicy, CI, docs"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 2
+ },
+ {
+  "date": "2026-09-03",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 15,
+  "score": 5.8,
+  "milestone": false,
+  "projects": [
+   "config",
+   "llm_council",
+   "security-20261022",
+   "src",
+   "tests"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-04",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 32,
+  "score": 5.6,
+  "milestone": false,
+  "projects": [
+   "dist-portable",
+   "scripts",
+   "security-20261022",
+   "sidecar"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-05",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 3,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "security-20261022"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-10",
+  "weekday": "Thu",
+  "commits": 38,
+  "files": 0,
+  "score": 115.0,
+  "milestone": true,
+  "projects": [
+   "wanderstar-worldsmith-demokit"
+  ],
+  "repo_breakdown": {
+   "wanderstar-worldsmith-demokit": 38
+  },
+  "types": {
+   "新功能": 17,
+   "修复": 6,
+   "文档": 6,
+   "杂务": 3,
+   "测试": 3
+  },
+  "highlights": [
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "修复",
+    "text": "make runtime systems truly generic, fix assist timer P1"
+   },
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "新功能",
+    "text": "Dawnscar Golden Planet design pass"
+   },
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "修复",
+    "text": "planet clipping and smooth terrain"
+   },
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "",
+    "text": "art(v0.4): Blender hero assets for Dawnscar"
+   },
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "文档",
+    "text": "acceptance checklist and state update"
+   },
+   {
+    "repo": "wanderstar-worldsmith-demokit",
+    "type": "新功能",
+    "text": "photography presentation system"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "wanderstar-worldsmith-demokit",
+   "commits": 38,
+   "angle": "Dawnscar Golden Planet design pass、photography presentation system、terminator lighting, scatter, atmosphere, smoke test"
+  },
+  "private_commits": 38
+ },
+ {
+  "date": "2026-09-16",
+  "weekday": "Wed",
+  "commits": 48,
+  "files": 0,
+  "score": 146.0,
+  "milestone": true,
+  "projects": [
+   "agentmesh",
+   "astrbot_plugin_CitationAudit"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_CitationAudit": 33,
+   "agentmesh": 15
+  },
+  "types": {
+   "新功能": 24,
+   "修复": 11,
+   "文档": 4,
+   "杂务": 3,
+   "测试": 3,
+   "流水线": 2,
+   "重构": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "live ZCode remote driver, @user continuation, deferred mentions"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.1 hardening — collaboration closure, session correctness, runtime hardening"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "restore default port to 4780"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "杂务",
+    "text": "add pnpm lockfile for reproducible installs"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "文档",
+    "text": "getting started, known issues, and original design specs"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "React control-room GUI"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "astrbot_plugin_CitationAudit",
+   "commits": 33,
+   "angle": "add recall benchmark metrics with source coverage、add high-recall multi-query multi-source evidence retriever、surface provenance uncertainty and degraded mode in reports"
+  },
+  "private_commits": 48
+ },
+ {
+  "date": "2026-09-17",
+  "weekday": "Thu",
+  "commits": 2,
+  "files": 3,
+  "score": 8.2,
+  "milestone": false,
+  "projects": [
+   "agentmesh",
+   "security-20261022"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 2
+  },
+  "types": {
+   "修复": 2
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "P0 correctness + CodexAdapter live protocol verification"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "P0 state correctness + live Codex probe"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 2
+ },
+ {
+  "date": "2026-09-18",
+  "weekday": "Fri",
+  "commits": 1,
+  "files": 28,
+  "score": 13.4,
+  "milestone": false,
+  "projects": [
+   "agentmesh",
+   "boards",
+   "firmware",
+   "hardware",
+   "include",
+   "official",
+   "scripts",
+   "security-20261022",
+   "src"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 1
+  },
+  "types": {
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "honest L7 resume, threadMap restoration, capability truthfulness"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 1
+ },
+ {
+  "date": "2026-09-19",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 350,
+  "score": 7.1,
+  "milestone": false,
+  "projects": [
+   "docs",
+   "firmware",
+   "scripts"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-20",
+  "weekday": "Sun",
+  "commits": 6,
+  "files": 3,
+  "score": 20.1,
+  "milestone": true,
+  "projects": [
+   "agentmesh",
+   "security-20261022"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 6
+  },
+  "types": {
+   "修复": 4,
+   "新功能": 2
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "ReviewDispatch CAS before send, dirty-turn cumulative snapshot, SQLite retry budget"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "make control-plane E2E git commands portable for Linux CI"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "CI unit tests — secret store dir mode 0o700, unique temp secrets path per test"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.2.2 Control Plane correctness — unique review dispatch, strict ChangeSet binding, turn snapshots, session lineage, restart recovery"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "Control Plane closure — dispatch context, structured review, server E2E"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.2 Control Plane — ChangeSet/Review cycle/Blackboard/Workflow"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 6,
+   "angle": "Control Plane closure — dispatch context, structured review, server E2E、v0.2 Control Plane — ChangeSet/Review cycle/Blackboard/Workflow"
+  },
+  "private_commits": 6
+ },
+ {
+  "date": "2026-09-21",
+  "weekday": "Mon",
+  "commits": 11,
+  "files": 20,
+  "score": 38.0,
+  "milestone": true,
+  "projects": [
+   "agentmesh",
+   "firmware",
+   "scripts",
+   "tools"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 11
+  },
+  "types": {
+   "新功能": 6,
+   "修复": 4,
+   "流水线": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3 Task Compiler IR + Capability-aware Worker Scheduler — deterministic compile, eligibility/rank, reservations, decisions, API/CLI/"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.2.5.5 ZCode Account Snapshot Parity & Final Freeze Gate — basedOn revision contract, registry application semantics, official snapsh"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "流水线",
+    "text": "fix verify-zcode-upstream pnpm/action-setup package_json_file path"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.2.5.4 Official ZCode Credential Bridge — pinned upstream host auth, fail-closed native production, account revision parity, verify-"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.2.5.3 Official ZCode Native Account Host Authority Closure — exact updateAccountConfig envelope, Host requestAuth resolver, fail-clo"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.2.5.2 Official ZCode Final Host Closure — setModel {sessionId,model}, no env secret + 0o600 credential materialization, Native Accou"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 11,
+   "angle": "v0.3 Task Compiler IR + Capability-aware Worker Scheduler — deterministic compile, eligibility/rank, reservations, decisions, API/CLI/、v0.2.5.4 Official ZCode Credential Bridge — pinned upstream host auth, fail-closed native production, account revision parity, verify-、v0.2.5.1 Official ZCode Host Contract — strict schema, ModelSelection, reverse runtime auth, official provider_config, reserved env, c"
+  },
+  "private_commits": 11
+ },
+ {
+  "date": "2026-09-22",
+  "weekday": "Tue",
+  "commits": 7,
+  "files": 2,
+  "score": 24.1,
+  "milestone": true,
+  "projects": [
+   "agentmesh",
+   "firmware",
+   "scripts"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 7
+  },
+  "types": {
+   "新功能": 4,
+   "修复": 2,
+   "文档": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "文档",
+    "text": "v0.3.4 Connection Center acceptance report (CI 35749071682 success)"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.4 Connection Center + Subscription Onboarding + Provider Discovery + Managed Browser Profiles + Connection Acceptance Tests"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.3.3.1 Planner Intent Safety + DAG Recovery Closure + Typed Artifact Normalization"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.3 Persistent Task DAG Planner + Dependency-aware Executor + Artifact/Dataflow Contracts"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "v0.3.2.1 Scheduler Affinity + Failure Cleanup Hotfix"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.2 Dispatch Outcome Contract + Terminal Resource Lifecycle + True Goal Golden Path"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 7,
+   "angle": "v0.3.4 Connection Center + Subscription Onboarding + Provider Discovery + Managed Browser Profiles + Connection Acceptance Tests、v0.3.3 Persistent Task DAG Planner + Dependency-aware Executor + Artifact/Dataflow Contracts、v0.3.2 Dispatch Outcome Contract + Terminal Resource Lifecycle + True Goal Golden Path"
+  },
+  "private_commits": 7
+ },
+ {
+  "date": "2026-09-23",
+  "weekday": "Wed",
+  "commits": 13,
+  "files": 0,
+  "score": 40.0,
+  "milestone": true,
+  "projects": [
+   "agentmesh"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 13
+  },
+  "types": {
+   "修复": 8,
+   "文档": 3,
+   "新功能": 1,
+   "测试": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "restrict agent seeding to the true production path (no injected registry or factories)"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "seed logical agents on production path only (tests inject their own agents)"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "seed logical agents, schedulable worker state, connection-aware scoring"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "@mention autocomplete, zh plan panel, provider reuse across harnesses, real Codex app-server chain"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "Workers page shows live auth evidence, not stale control-plane state"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "embedded login PTY, worker-scoped copy command, secret-store isolation"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 13,
+   "angle": "@mention autocomplete, zh plan panel, provider reuse across harnesses, real Codex app-server chain"
+  },
+  "private_commits": 13
+ },
+ {
+  "date": "2026-09-24",
+  "weekday": "Thu",
+  "commits": 9,
+  "files": 60,
+  "score": 37.0,
+  "milestone": true,
+  "projects": [
+   "agentmesh",
+   "dist-portable",
+   "idextts2software",
+   "jiangnan-water-town",
+   "sidecar",
+   "src",
+   "tools"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 9
+  },
+  "types": {
+   "修复": 4,
+   "新功能": 3,
+   "文档": 1,
+   "测试": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.8 verifiable, reusable, improvable AI employee team (G1-G7)"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.6 agent execution profiles + v0.3.7 agent memory"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "文档",
+    "text": "acceptance report + GUI_SPEC agent studio section"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "测试",
+    "text": "deflake inbox gui assertion — assert approve button gone (CI-slow tolerant)"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "reserve runtime family addresses (@codex/@claude/...) for agent creation"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "新功能",
+    "text": "v0.3.5 Agent Studio + collaboration control room"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 9,
+   "angle": "v0.3.8 verifiable, reusable, improvable AI employee team (G1-G7)、v0.3.6 agent execution profiles + v0.3.7 agent memory、v0.3.5 Agent Studio + collaboration control room"
+  },
+  "private_commits": 9
+ },
+ {
+  "date": "2026-09-25",
+  "weekday": "Fri",
+  "commits": 2,
+  "files": 18,
+  "score": 11.9,
+  "milestone": false,
+  "projects": [
+   "agentmesh",
+   "jiangnan-water-town",
+   "render",
+   "src",
+   "tools"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 2
+  },
+  "types": {
+   "修复": 1,
+   "测试": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "independent review remediation — P0-1/2/3 + secondary gaps"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "测试",
+    "text": "deflake goal-production-golden-path — accept active-or-released reservation and finalized-occupancy windows (fast CI machines"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 2
+ },
+ {
+  "date": "2026-09-26",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 3,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "render"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-27",
+  "weekday": "Sun",
+  "commits": 7,
+  "files": 0,
+  "score": 22.0,
+  "milestone": true,
+  "projects": [
+   "agentmesh"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 7
+  },
+  "types": {
+   "修复": 3,
+   "测试": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "terminal closure for plan-less direct dispatches"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "",
+    "text": "live(v0.3.8): Qwen-Image 2512 + Edit 2509 installed and verified on user's ComfyUI rig"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "codex MCP headers break config parse; exporter wrote wrong home dir"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "",
+    "text": "live(v0.3.8): ComfyUI MiniMax H3 image-to-video verified end-to-end"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "",
+    "text": "live(v0.3.8): real-model live acceptance — tavily MCP handshake, image-01 t2i, agnes-video i2v; watchdog node blocked state"
+   },
+   {
+    "repo": "agentmesh",
+    "type": "测试",
+    "text": "deflake inbox gui assertion — closed-loop on seed card resolved-or-gone (other decision items may legitimately remain in the q"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "agentmesh",
+   "commits": 7,
+   "angle": "fix(v0.3.2 lifecycle): terminal closure for plan-less direct dispatches"
+  },
+  "private_commits": 7
+ },
+ {
+  "date": "2026-09-28",
+  "weekday": "Mon",
+  "commits": 1,
+  "files": 50,
+  "score": 9.5,
+  "milestone": false,
+  "projects": [
+   "agentmesh",
+   "media-panel",
+   "resource-sites",
+   "site-probe"
+  ],
+  "repo_breakdown": {
+   "agentmesh": 1
+  },
+  "types": {
+   "修复": 1
+  },
+  "highlights": [
+   {
+    "repo": "agentmesh",
+    "type": "修复",
+    "text": "disable Responses WebSocket for relay providers; TOML model root-scope placement"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 1
+ },
+ {
+  "date": "2026-09-29",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 84,
+  "score": 10.2,
+  "milestone": false,
+  "projects": [
+   "chaser",
+   "chaser-suite",
+   "desktop-danmaku",
+   "director-desk",
+   "media-panel",
+   "resource-sites"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-09-30",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 11,
+  "score": 6.5,
+  "milestone": false,
+  "projects": [
+   "chaser-suite",
+   "hardware",
+   "neon-barrage",
+   "resource-sites",
+   "scripts",
+   "security-20261022"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-02",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 1,
+  "score": 1.1,
+  "milestone": false,
+  "projects": [
+   "crazy-water-demo"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-04",
+  "weekday": "Sun",
+  "commits": 0,
+  "files": 5,
+  "score": 1.2,
+  "milestone": false,
+  "projects": [
+   "crazy-water-demo"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-05",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 68,
+  "score": 5.4,
+  "milestone": false,
+  "projects": [
+   "chaser-suite",
+   "h3-director"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-06",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 15,
+  "score": 2.8,
+  "milestone": false,
+  "projects": [
+   "h3-director",
+   "security-20261022"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-07",
+  "weekday": "Wed",
+  "commits": 6,
+  "files": 0,
+  "score": 19.0,
+  "milestone": true,
+  "projects": [
+   "civlab"
+  ],
+  "repo_breakdown": {
+   "civlab": 6
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Add settlement footprints and constrained civilian expansion"
+   },
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Fix null metrics crashes and add saved-world observation entry"
+   },
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Balance civilization research with a 40-tech tree and staffed trials"
+   },
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Document source checkout and local data exclusions"
+   },
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Preserve executable permissions for shell launchers"
+   },
+   {
+    "repo": "civlab",
+    "type": "",
+    "text": "Initial CIVLAB embers campaign source release"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "civlab",
+   "commits": 6,
+   "angle": "Add settlement footprints and constrained civilian expansion"
+  },
+  "private_commits": 6
+ },
+ {
+  "date": "2026-10-11",
+  "weekday": "Sun",
+  "commits": 0,
+  "files": 51,
+  "score": 3.5,
+  "milestone": false,
+  "projects": [
+   "neon-breach"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-12",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 13,
+  "score": 1.6,
+  "milestone": false,
+  "projects": [
+   "neon-breach"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-13",
+  "weekday": "Tue",
+  "commits": 5,
+  "files": 0,
+  "score": 16.0,
+  "milestone": true,
+  "projects": [
+   "ainovelworkflow"
+  ],
+  "repo_breakdown": {
+   "ainovelworkflow": 5
+  },
+  "types": {
+   "修复": 2,
+   "文档": 1
+  },
+  "highlights": [
+   {
+    "repo": "ainovelworkflow",
+    "type": "修复",
+    "text": "let orchestrated projects plan a long serial"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Merge agent work from 2026-09-30 with audited fixes"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "文档",
+    "text": "record post-fix test and lint results in WIP audit"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "修复",
+    "text": "resolve verified findings from the 2026-10-13 WIP audit"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "wip: preserve unreviewed 2026-09-30 agent work with audit report"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": {
+   "project": "ainovelworkflow",
+   "commits": 5,
+   "angle": "fix(api): let orchestrated projects plan a long serial"
+  },
+  "private_commits": 5
+ },
+ {
+  "date": "2026-10-14",
+  "weekday": "Wed",
+  "commits": 25,
+  "files": 2,
+  "score": 78.1,
+  "milestone": true,
+  "projects": [
+   "ainovelworkflow",
+   "security-20261022"
+  ],
+  "repo_breakdown": {
+   "ainovelworkflow": 25
+  },
+  "types": {
+   "修复": 10,
+   "新功能": 4
+  },
+  "highlights": [
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Constrain chapter revisions: no new repetition, no revealing hidden items"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Keep a rewritten chapter's tasks retryable against its base state"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Accept deletion of a short flagged sentence as a revision"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Allow regenerating a chapter more than once"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Do not re-plan a written chapter when its plan is revised"
+   },
+   {
+    "repo": "ainovelworkflow",
+    "type": "",
+    "text": "Stage scenes explicitly and review who is where"
+   }
+  ],
+  "conversations": 3,
+  "conv_samples": [
+   "分析一下这个http://192.168.3.135:8412/mcp 你应该能免密连上去",
+   "组合优化一下，顺便排查一下卡死在哪",
+   "[Request interrupted by user]"
+  ],
+  "candidate": {
+   "project": "ainovelworkflow",
+   "commits": 25,
+   "angle": "bind rolling ChapterPlans to an optional author chapter outline、optional per-specialist LLM models、review what the reader is told, not only what characters know"
+  },
+  "private_commits": 25
+ },
+ {
+  "date": "2026-10-16",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 16,
+  "score": 1.8,
+  "milestone": false,
+  "projects": [
+   "elder-cover-20261016"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-17",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 8,
+  "score": 2.4,
+  "milestone": false,
+  "projects": [
+   "pixel-cat-gif",
+   "pixel-ronin-gif"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-19",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 11493,
+  "score": 15.8,
+  "milestone": false,
+  "projects": [
+   "deepseek-update-repair-20261019",
+   "integrations",
+   "memory-bridge",
+   "memory_bridge",
+   "memory_bridge.egg-info",
+   "results",
+   "scripts",
+   "security-20261022",
+   "tests",
+   "wonder-play"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-20",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 20,
+  "score": 7.7,
+  "milestone": false,
+  "projects": [
+   "integrations",
+   "memory-bridge",
+   "memory_bridge",
+   "results",
+   "security-20261022",
+   "tests"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 2,
+  "conv_samples": [
+   "查看astrbot和deepseek harness，我要为astrbot和deepseek harness制作一个记忆系统，要完整打通硬件+qq微信+其他适配器的统筹记忆系统，要横跨用户对话，用户喜好，用户工程状态，目的是像一个加了各种好友，并且能面对面交流的“人”一样，记忆系统快开发完毕了，接下来需要改造astrb",
+   "[Request interrupted by user]"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-22",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 33,
+  "score": 5.7,
+  "milestone": false,
+  "projects": [
+   "css",
+   "security-20261022",
+   "src",
+   "suzhou-garden"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-24",
+  "weekday": "Sat",
+  "commits": 0,
+  "files": 68,
+  "score": 5.4,
+  "milestone": false,
+  "projects": [
+   "artifacts",
+   "h3-qwen21-3080e5-test-20261024"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-25",
+  "weekday": "Sun",
+  "commits": 1,
+  "files": 164,
+  "score": 15.2,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis",
+   "everything-sandbox",
+   "five-character-story-20261025",
+   "infinite-scale"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #64 from miaoxutao123/fix/full-repair"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-26",
+  "weekday": "Mon",
+  "commits": 2,
+  "files": 45,
+  "score": 12.2,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis",
+   "everything-sandbox",
+   "footage-rag",
+   "infinite-scale"
+  ],
+  "repo_breakdown": {
+   "astrbot_plugin_videos_analysis": 1,
+   "footage-rag": 1
+  },
+  "types": {},
+  "highlights": [
+   {
+    "repo": "astrbot_plugin_videos_analysis",
+    "type": "",
+    "text": "Merge pull request #65 from miaoxutao123/fix/full-repair"
+   },
+   {
+    "repo": "footage-rag",
+    "type": "",
+    "text": "Initial commit: footage-rag multimodal RAG footage library"
+   }
+  ],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 1
+ },
+ {
+  "date": "2026-10-27",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 13,
+  "score": 1.6,
+  "milestone": false,
+  "projects": [
+   "infinite-scale"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-10-29",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 0,
+  "score": 0.7,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 2,
+  "conv_samples": [
+   "我离开了局域网环境，请使用100.88.14.92作为你的大内网IP来供给我访问，继续打磨第一集的分镜设计和视频口型音画问题，还有部分场景崩了的问题，可以去参考一些导演和拍摄的思维",
+   "[Request interrupted by user]"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-03",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 0,
+  "score": 3.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "分析一下当前仓库，查看设计不合理之处",
+   "看看astrbot容器内的b站二维码为啥不能扫了",
+   "放行 Docker 网段"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-04",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 0,
+  "score": 1.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 4,
+  "conv_samples": [
+   "机器在重装后又出现了多次卡死需要手动重启，卡死到局域网：toddmiao@raspberrypi:~ $ ssh toddmiao@192.168.3.205",
+   "写好脚本我来运行",
+   "如果本机可以升级板u你建议升级成什么配置"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-05",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 0,
+  "score": 3.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "证书可以使用aliyun上的1panel管理，他和我的所有机器在一个大内网种，可以反向代理做到公网https可达",
+   "我只在大内网中安全的使用1panel的key，应该配置什么IP白名单呢",
+   "哦哦，我配置了只允许127.0.0.1访问，key我要放到哪里呢"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-06",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 21,
+  "score": 5.0,
+  "milestone": false,
+  "projects": [
+   "app",
+   "models",
+   "scripts"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 3,
+  "conv_samples": [
+   "生成超现实特写海报图片",
+   "解释 nemoclaw 含义",
+   "调研开源asr模型并部署webui"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-09",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 29,
+  "score": 3.5,
+  "milestone": false,
+  "projects": [
+   "image-studio",
+   "particle-garden"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-10",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 0,
+  "score": 3.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "查看astrbot和deepseek harness，我要为astrbot和deepseek harness制作一个记忆系统，要完整打通硬件+qq微信+其他适配器的统筹记忆系统，要横跨用户对话，用户喜好，用户工程状态，目的是像一个加了各种好友，并且能面对面交流的“人”一样，记忆系统快开发完毕了，接下来需要改造astrb",
+   "交互式和我确认一下开发方向正确",
+   "用最新版当基线，方便同步取舍上游更新"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-11",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 34,
+  "score": 8.0,
+  "milestone": false,
+  "projects": [
+   "saltline-offline",
+   "saltline-studio",
+   "sektor-b"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "不阅读之前的记忆，如何提高llm的视频生成水平，minimax h3在20g显存下的最高水平能否达到当前主流视频模型的水平",
+   "如果在本机的5070ti 12g上呢",
+   "二次采样可以更好的增加细节和分辨率，仔细查查还有没有类似的技术"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-12",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 0,
+  "score": 3.3,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "链接本机达芬奇，看看能不能看到主持人时间线",
+   "@\"Y:\\VSMAM存储库\\Y盘 项目储存\\Y 2026项目\\2026移风易俗 晚会\\资料\\11.2  21：19  0207主持人串词（字号小三）定稿(3).docx\"",
+   "现在是在等待代理生成完毕？"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-13",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 17,
+  "score": 5.2,
+  "milestone": false,
+  "projects": [
+   "web3d-delta-fps"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "设计一个美观的登录页",
+   "https://github.com/miaoxutao123/FishTool  拉取下来分析一下这个仓库",
+   "对比一下我的astrbot_plugin_videos_analysis 看看能不能给当前仓库增加一些小得新功能"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-16",
+  "weekday": "Mon",
+  "commits": 0,
+  "files": 135,
+  "score": 5.0,
+  "milestone": false,
+  "projects": [
+   "short-drama-120s-20261116"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 0,
+  "conv_samples": [],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-17",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 20,
+  "score": 6.0,
+  "milestone": false,
+  "projects": [
+   "NapCat.Framework-v1.0.4",
+   "config",
+   "short-drama-120s-20261116"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 6,
+  "conv_samples": [
+   "检查一下本磁盘内的几个napcat版本哪个含有语音通话接口",
+   "聚焦到视频部分，我记得是不完全支持的，目前本机E:\\NapCat\\NapCatWinBootMain.exe登录了一个账号3828304382，尝试使用它进行一个ai视频通话，用一段视频循环播放以测试视频流，并在接通后尝试获取视频流",
+   "Try again"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-18",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 1863,
+  "score": 36.5,
+  "milestone": false,
+  "projects": [
+   "AstrBot-11197",
+   "NapCat.Framework-v1.0.4",
+   "astrbot",
+   "changelogs",
+   "dashboard",
+   "docs",
+   "k8s",
+   "openai-key-checker",
+   "openspec",
+   "scripts",
+   "tests"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "E:\\NapCat.Framework-v1.0.4\\HANDOFF.md  阅读并接手进行开发",
+   "我已登录小号，执行测试对我的另一个账号1025332440发起视频通话并监控是否有发送和接收",
+   "等会儿，我让你测试的是napcat的技能，不是让你自己打"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-19",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 54,
+  "score": 16.0,
+  "milestone": false,
+  "projects": [
+   "astrbot_plugin_videos_analysis",
+   "dist-portable",
+   "docs",
+   "douyin_scraper",
+   "handlers",
+   "pages",
+   "services",
+   "tests",
+   "tools",
+   "utils"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 10,
+  "conv_samples": [
+   "同步最新仓库，查看类似的红果链接能不能读取[https://novelquickapp.com/hongguo/ug/pages/video-animation-share?encrypt_did=MDEEDFPWFkUh4FU4XS%2B0oAQPsyE1TyLTVgpbDyws4q8LBBA0NyKHz2LxV9M",
+   "尝试实现解析",
+   "能否自动解析后续剧情"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-20",
+  "weekday": "Fri",
+  "commits": 0,
+  "files": 0,
+  "score": 2.7,
+  "milestone": false,
+  "projects": [],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 8,
+  "conv_samples": [
+   "我已添加，你尝试练一下",
+   "继续使用目标机器上的3xui完成代理搭建",
+   "所以这个域名和服务器都无法直连对吗"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-24",
+  "weekday": "Tue",
+  "commits": 0,
+  "files": 44,
+  "score": 5.9,
+  "milestone": false,
+  "projects": [
+   "2026-11-24-11-52-19",
+   "szhc-subtitle-review"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 5,
+  "conv_samples": [
+   "[http://182.92.184.90:8081/index](http://182.92.184.90:8081/index) 观察这个网址，监控上传流量和方式，保证上传不要因为意外中断或者可以断点续传",
+   "你在你的内嵌浏览器打开，我登陆然后上传，你做好监控和补救",
+   "现在页面正在上传，不要额外打开新页面了"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-25",
+  "weekday": "Wed",
+  "commits": 0,
+  "files": 17,
+  "score": 6.8,
+  "milestone": false,
+  "projects": [
+   "2026-11-25-12-24-47",
+   "2026-11-25-19-59-34",
+   "szhc-subtitle-review"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 9,
+  "conv_samples": [
+   "可否进行多线程比较，或者说已经是多线程了",
+   "拆解《宿命之环》小说IP",
+   "查找GitHub账号中的AstrBot workflow fork"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ },
+ {
+  "date": "2026-11-26",
+  "weekday": "Thu",
+  "commits": 0,
+  "files": 20,
+  "score": 3.3,
+  "milestone": false,
+  "projects": [
+   "2026-11-25-19-59-34",
+   "2026-11-26-00-05-18"
+  ],
+  "repo_breakdown": {},
+  "types": {},
+  "highlights": [],
+  "conversations": 1,
+  "conv_samples": [
+   "整理归纳本机 agent 记录的项目进展"
+  ],
+  "candidate": null,
+  "private_commits": 0
+ }
+]
