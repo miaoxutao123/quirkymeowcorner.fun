@@ -59,6 +59,20 @@ draft: false
 
 就这些。没实现的语法（比如脚注）会原样当文本输出，不会报错也不会吞内容。
 
+### 内嵌作品（受限 iframe）
+
+文章里可以单独起一段写 iframe，把 `assets/` 下的单文件作品直接嵌进正文：
+
+```html
+<iframe class="slide-embed" src="/lbs/" title="作品名" loading="lazy" allowfullscreen></iframe>
+```
+
+只放行 iframe 一种标签，属性名有白名单，`src` 必须是站内路径（不许 `..`、不许 `srcdoc`）。不满足的按普通文本显示——不给 Markdown 开任意 HTML 的口子。
+
+### 静态资源
+
+`assets/` 下的所有文件原样复制到站点根目录。比如 `assets/lbs/index.html` 发布后在 `/lbs/`，`assets/lbs/shots/01.jpg` 在 `/lbs/shots/01.jpg`，文章里直接引用即可。
+
 ## 发布流程
 
 ```bash

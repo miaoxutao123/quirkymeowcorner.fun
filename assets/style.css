@@ -708,8 +708,40 @@ a.cell:hover {
 .copy-btn:hover { color: var(--ink); border-color: var(--line-2); }
 .copy-btn.done { color: var(--accent); border-color: var(--accent); }
 
-.prose img { max-width: 100%; height: auto; border-radius: 8px; }
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-md);
+  margin: 4px 0 8px;
+}
+/* 截图下面那行小字说明：图片同一行段落里紧跟的 *文字* 才算图注，
+   不动正文里单独成段的斜体，免得误伤。 */
+.prose img + em {
+  display: block;
+  font-size: 13px;
+  font-style: normal;
+  color: var(--ink-3);
+  line-height: 1.6;
+}
 .prose hr { border: 0; border-top: 1px solid var(--line); margin: 36px 0; }
+
+/* 文章里内嵌的可交互作品（iframe 白名单见 mdrender.py） */
+.prose iframe.slide-embed {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-lg);
+  margin: 6px 0 10px;
+}
+.prose .embed-note { font-size: 13.5px; color: var(--ink-3); line-height: 1.7; }
+.prose .embed-note a { white-space: nowrap; }
 
 .table-wrap {
   overflow-x: auto;

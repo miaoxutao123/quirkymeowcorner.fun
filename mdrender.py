@@ -50,6 +50,43 @@ def _inline(text):
     return text
 
 
+# ---------- 受限的 iframe 嵌入 ----------
+#
+# 文章里偶尔要嵌一个自己的作品（比如一份单文件 HTML 演示）。
+# 但不能为了这个就把渲染器改成"原样放行任意 HTML"——那等于给每一篇
+# Markdown 开了注入口子，粘贴来的内容也能带 <script>。
+# 所以只放行 iframe 一种标签，并且：
+#   属性名必须在白名单里（srcdoc、onload 之类天然进不来）；
+#   src 只能是站内路径，不能带 .. 回退、不能是 javascript:。
+# 不满足的一律按普通文本转义输出，和"不支持的语法原样显示"保持一致。
+IFRAME_ATTRS = {
+    "src", "width", "height", "loading", "title", "class",
+    "allowfullscreen", "sandbox", "referrerpolicy", "style",
+}
+
+
+def _safe_iframe(block):
+    if not re.match(r"^<iframe\s+[^>]*>\s*</iframe>$", block, re.I):
+        return False
+    attrs = re.findall(r'([a-zA-Z-]+)(?:\s*=\s*"([^"]*)")?', block)
+    src = None
+    for name, value in attrs:
+        name = name.lower()
+        if name == "iframe":
+            continue
+        if name not in IFRAME_ATTRS:
+            return False
+        if name == "src":
+            src = value or ""
+    if not src:
+        return False
+    if not src.startswith("/") or src.startswith("//"):
+        return False
+    if ".." in src or "\\" in src or "javascript:" in src.lower():
+        return False
+    return True
+
+
 # ---------- 块级 ----------
 
 FENCE_RE = re.compile(r"^\s*```(\w*)\s*$")
@@ -98,6 +135,16 @@ def render(md):
         # 空行
         if not line.strip():
             i += 1
+            continue
+
+        # 受限 iframe：单独成块，前后段落都不能把它吞进去
+        if line.lstrip().lower().startswith("<iframe"):
+            block = line.strip()
+            i += 1
+            while i < n and "</iframe>" not in block and lines[i].strip():
+                block += " " + lines[i].strip()
+                i += 1
+            out.append(block if _safe_iframe(block) else f"<p>{html.escape(block)}</p>")
             continue
 
         # 分隔线
@@ -175,6 +222,7 @@ def render(md):
                 break
             if (FENCE_RE.match(nxt) or HEADING_RE.match(nxt) or QUOTE_RE.match(nxt)
                     or UL_RE.match(nxt) or OL_RE.match(nxt) or HR_RE.match(nxt)
+                    or nxt.lstrip().lower().startswith("<iframe")
                     or ("|" in nxt and i + 1 < n and TABLE_SEP_RE.match(lines[i + 1]))):
                 break
             buf.append(nxt.strip())
